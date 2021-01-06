@@ -1,0 +1,1 @@
+https://discord.com/oauth2/authorize?prompt=none&response_type=token&client_id=796490540619137024&state=15773059ghq9183habn&scope=identify%20guilds
