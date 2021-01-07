@@ -1,6 +1,6 @@
 const rawToken = window.location.href.match(/access_token=[+A-z0-9]{1,30}/);
 if (!rawToken) {
-  window.location.href = `https://discord.com/api/oauth2/authorize?client_id=796490540619137024&redirect_uri=https%3A%2F%2Fcounter.issai.club&response_type=code&scope=guilds%20identify`;
+  window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2Flighthouse.issai.club&response_type=token&scope=guilds%20identify`;
 }
 const token = rawToken[0].replace("access_token=", "");
 window.history.pushState({}, "", " ");

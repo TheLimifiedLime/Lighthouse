@@ -1,0 +1,1 @@
+To compile the css run "npx postcss public/css/home.css -o public/css/tailwind.css". This will also tree shake unused styles
