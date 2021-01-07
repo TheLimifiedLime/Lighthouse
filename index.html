@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Lightstorm</title>
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body class="bg-gray-800">
-    <img
+<head>
+	<title>Lightstorm</title>
+	<!--Meta Tags-->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="description" content="Lighthouse is a beautiful, yet simple to use tool to view how many Discord servers you are in">
+	<meta name="keywords" content="Lighthouse, Discord, Guild, Counter, Discord Guild, Discord Guild Counter">
+	<meta name="author" content="Issai H">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="content-language" content="en-us" />
+  <!--Open Graph Tags-->
+	<meta property="og:site_name" content="Lighthouse">
+	<meta property="og:title" content="Lighthouse">
+	<meta property="og:description" content="Lighthouse is a beautiful, yet simple to use tool to view how many Discord servers you are in">
+	<meta property="og:image" content="">
+	<meta property="og:url" content="https://lighthouse.issai.club">
+
+	<meta name="twitter:creator" content="TheLimifiedLime">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image:alt" content="">
+
+	<meta name="theme-color" content="#2ECC71">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/44df751230.js" crossorigin="anonymous">
+	</script>
+</head>
+
+<body class="bg-gray-800">
+	<div id="curtain" style="display:none;">
+
+		<img
       id="avatar"
       src="https://dummyimage.com/1000x1000/1f2937/1f2937.png"
       style="margin: auto; margin-top: 1rem"
@@ -27,5 +47,9 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
+    </div>
+    <div id="spinner" style="position:absolute;left:50%;top: 50%;transform: translate(-50%, -50%);" class="text-center">
+      <i style="color:white;" class="fas fa-spinner animate-spin fa-3x"></i>
+    </div>
   </body>
 </html>
