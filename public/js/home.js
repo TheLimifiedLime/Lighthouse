@@ -12,8 +12,6 @@ axios
     },
   })
   .then(function (response) {
-    // handle success
-    //alert(response.data);
     document.getElementById(
       "avatar"
     ).src = `https://cdn.discordapp.com/avatars/${response.data.id}/${response.data.avatar}?size=4096`;
@@ -23,8 +21,7 @@ axios
     ).innerText = `Hey, ${response.data.username}#${response.data.discriminator}`;
   })
   .catch(function (error) {
-    // handle error
-    document.body.innerText = error.stack;
+    alert(`An error occured while fetching your user info`);
   });
 
 axios
@@ -36,11 +33,10 @@ axios
   .then(function (response) {
     document.getElementById(
       "counter-container"
-    ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-3xl font-mono">${response.data.length}</span> guilds!`;
+    ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-5xl font-mono">${response.data.length}</span> guilds!`;
     document.getElementById("spinner").style.display = `none`;
     document.getElementById("curtain").style.display = `block`;
   })
   .catch(function (error) {
-    // handle error
-    alert(error.stack);
+    alert(`An error occured while fetching your server count`);
   });
