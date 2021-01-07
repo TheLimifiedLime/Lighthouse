@@ -36,7 +36,7 @@ async function run() {
     .then(function (response) {
       document.getElementById(
         "counter"
-      ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-5xl font-mono">${response.data.length}</span> guilds!`;
+      ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-5xl font-mono">${response.data.length}</span> servers!`;
       document.getElementById("spinner").style.display = `none`;
       document.getElementById("curtain").style.display = `block`;
     })
