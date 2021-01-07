@@ -1,5 +1,7 @@
 async function run() {
-  const rawToken = await window.location.href.match(/access_token=[+A-z0-9]{1,30}/);
+  const rawToken = await window.location.href.match(
+    /access_token=[+A-z0-9]{1,30}/
+  );
   if (!rawToken) {
     window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2Flighthouse.issai.club&response_type=token&scope=guilds%20identify`;
   }
@@ -12,7 +14,7 @@ async function run() {
         Authorization: "Bearer " + token,
       },
     })
-    .then(function(response) {
+    .then(function (response) {
       document.getElementById(
         "avatar"
       ).src = `https://cdn.discordapp.com/avatars/${response.data.id}/${response.data.avatar}?size=4096`;
@@ -21,7 +23,7 @@ async function run() {
         "welcome"
       ).innerText = `Hey, ${response.data.username}#${response.data.discriminator}`;
     })
-    .catch(function(error) {
+    .catch(function (error) {
       alert(`An error occured while fetching your user info`);
     });
 
@@ -31,18 +33,18 @@ async function run() {
         Authorization: "Bearer " + token,
       },
     })
-    .then(function(response) {
+    .then(function (response) {
       document.getElementById(
         "counter"
       ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-5xl font-mono">${response.data.length}</span> guilds!`;
       document.getElementById("spinner").style.display = `none`;
       document.getElementById("curtain").style.display = `block`;
     })
-    .catch(function(error) {
+    .catch(function (error) {
       alert(`An error occured while fetching your server count`);
     });
   document.getElementById("spinner").style.display = `none`;
   document.getElementById("curtain").style.display = `block`;
 }
 
-run()
+run();
