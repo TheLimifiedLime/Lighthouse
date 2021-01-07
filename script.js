@@ -13,8 +13,14 @@ axios
   })
   .then(function (response) {
     // handle success
-    alert(response.data.length);
-    document.body.innerText = JSON.stringify(response);
+    //alert(response.data);
+    document.getElementById(
+      "avatar"
+    ).src = `https://cdn.discordapp.com/avatars/${response.data.id}/${response.data.avatar}?size=4096`;
+    document.getElementById("avatar").classList.add("border-8");
+    document.getElementById(
+      "welcome"
+    ).innerText = `Hey, ${response.data.username}#${response.data.discriminator}`;
   })
   .catch(function (error) {
     // handle error
@@ -29,10 +35,12 @@ axios
   })
   .then(function (response) {
     // handle success
-    alert(response.data.length);
-    document.body.innerText = JSON.stringify(response);
+    //document.getElementById('counter-container').innerText = `You are in guilds`
+    document.getElementById(
+      "counter-container"
+    ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-3xl font-mono">${response.data.length}</span>`;
   })
   .catch(function (error) {
     // handle error
-    document.body.innerText = error.stack;
+    alert(error.stack);
   });
