@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/44df751230.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Whoops</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/tailwind.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
 
-<head>
-
-	<script src="https://kit.fontawesome.com/44df751230.js" crossorigin="anonymous">
-
-	</script>
-	<title>Whoops</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="/css/tailwind.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-</head>
-
-<body class="bg-gray-800">
-	<div class="flex-row space-y-12">
-		<h1 class="animate__animated animate__slideInDown text-center text-3xl text-green-500 font-mono">Whoops!</h1>
-		<p class="animate__animated animate__slideInDown text-center text-xl text-green-500 font-mono">Seems like you stumbled
-			into an error. Don't worry as our magical hamsters have come to your rescue!</p>
-		<p id="alert" class="animate__animated animate__slideInDown text-center text-xl text-green-500 font-mono">You will be redirected
-			in
-			<br><span id="counter" class="text-white"> 5 </span> <br> seconds</p>
+  <body class="bg-gray-800">
+    <div class="flex-row space-y-12">
+      <h1
+        class="animate__animated animate__slideInDown text-center text-3xl text-green-500 font-mono"
+      >
+        Whoops!
+      </h1>
+      <p
+        class="animate__animated animate__slideInDown text-center text-xl text-green-500 font-mono"
+      >
+        Seems like you stumbled into an error. Don't worry as our magical
+        hamsters have come to your rescue!
+      </p>
+      <p
+        id="alert"
+        class="animate__animated animate__slideInDown text-center text-xl text-green-500 font-mono"
+      >
+        You will be redirected in <br /><span id="counter" class="text-white">
+          5
+        </span>
+        <br />
+        seconds
+      </p>
     </div>
 
     <script>
@@ -28,25 +45,24 @@
       let stop;
       const check = (number) => {
         if (number < 0) {
-          stop = true
+          stop = true;
         }
-
-      }
+      };
 
       const edit = () => {
-        count = count - 1
-        check(count)
-        const element = document.getElementById("counter")
-        const parent = document.getElementById("alert")
-        element.innerText = count
+        count = count - 1;
+        check(count);
+        const element = document.getElementById("counter");
+        const parent = document.getElementById("alert");
+        element.innerText = count;
         if (stop === true) {
-          clearInterval(interval)
-          parent.innerHTML = `<span class="text-white">Redirecting <i style="color:white;" class="fas fa-spinner animate-spin"></i></span>`
-          window.location.href = `https://${window.location.hostname}`
+          clearInterval(interval);
+          parent.innerHTML = `<span class="text-white">Redirecting <i style="color:white;" class="fas fa-spinner animate-spin"></i></span>`;
+          window.location.href = `https://${window.location.hostname}`;
         }
-      }
+      };
 
-      const interval = setInterval(edit, 1000)
+      const interval = setInterval(edit, 1000);
     </script>
   </body>
 </html>
