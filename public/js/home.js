@@ -64,8 +64,8 @@ async function run() {
   document.getElementById("curtain").style.display = `block`;
 
   if (infoFetchError || guildFetchError) {
-    window.location.href = `https://${window.location.hostname}/error`
+    window.location.href = `https://${window.location.hostname}/error`;
   }
 }
 
-run()
+run();
