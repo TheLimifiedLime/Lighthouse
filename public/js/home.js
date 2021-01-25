@@ -24,7 +24,7 @@ async function run() {
       ).innerText = `Hey, ${response.data.username}#${response.data.discriminator}`;
     })
     .catch(function (error) {
-      console.log(error)
+      console.log(error);
     });
 
   await axios
@@ -41,7 +41,7 @@ async function run() {
       document.getElementById("curtain").style.display = `block`;
     })
     .catch(function (error) {
-      console.log(error)
+      console.log(error);
     });
   document.getElementById("spinner").style.display = `none`;
   document.getElementById("curtain").style.display = `block`;
