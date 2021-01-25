@@ -11,6 +11,8 @@ async function run() {
 
   // If there is a token it removes the first part to leave the token by itself
   const token = await rawToken[0].replace("access_token=", "");
+  let infoFetchError;
+  let guildFetchError;
 
   // "Clears" the ur at the top of the users browser to prevent showing the token any longer than necessary
   //window.history.pushState({}, "", " ");
@@ -35,6 +37,7 @@ async function run() {
       ).innerText = `Hey, ${response.data.username}#${response.data.discriminator}`;
     })
     .catch(function (error) {
+      infoFetchError = true;
       console.log(error);
     });
 
@@ -52,12 +55,18 @@ async function run() {
       ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-5xl font-mono">${response.data.length}</span> servers!`;
     })
     .catch(function (error) {
+      guildFetchError = true;
       console.log(error);
     });
   // Hides spinner
   document.getElementById("spinner").style.display = `none`;
   // Unhides everything elseo covered by the "curtain"
   document.getElementById("curtain").style.display = `block`;
+
+  if (infoFetchError && guildFetchError) {
+    document.getElementById("error").innerText = `There was an error while retrieving your info.\nPlease try again in a few minutes.`
+  }
+
 }
 
 run();
