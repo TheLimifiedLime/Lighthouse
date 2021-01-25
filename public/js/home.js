@@ -24,9 +24,7 @@ async function run() {
       ).innerText = `Hey, ${response.data.username}#${response.data.discriminator}`;
     })
     .catch(function (error) {
-      document.getElementById(
-        "welcome"
-      ).innerHTML = `An error occured while fetching your user info`;
+      console.log(error)
     });
 
   await axios
@@ -43,9 +41,7 @@ async function run() {
       document.getElementById("curtain").style.display = `block`;
     })
     .catch(function (error) {
-      document.getElementById(
-        "counter"
-      ).innerHTML = `An error occured while fetching your server count`;
+      console.log(error)
     });
   document.getElementById("spinner").style.display = `none`;
   document.getElementById("curtain").style.display = `block`;
