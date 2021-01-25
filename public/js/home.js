@@ -35,7 +35,7 @@ async function run() {
       ).innerText = `Hey, ${response.data.username}#${response.data.discriminator}`;
     })
     .catch(function (error) {
-      console.log(error)
+      console.log(error);
     });
 
   // Fetches the guilds from the user so we can count them
@@ -52,12 +52,12 @@ async function run() {
       ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-5xl font-mono">${response.data.length}</span> servers!`;
     })
     .catch(function (error) {
-      console.log(error)
+      console.log(error);
     });
-        // Hides spinner
-      document.getElementById("spinner").style.display = `none`;
-      // Unhides everything elseo covered by the "curtain"
-      document.getElementById("curtain").style.display = `block`;
+  // Hides spinner
+  document.getElementById("spinner").style.display = `none`;
+  // Unhides everything elseo covered by the "curtain"
+  document.getElementById("curtain").style.display = `block`;
 }
 
 run();
