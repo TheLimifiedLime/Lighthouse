@@ -63,11 +63,9 @@ async function run() {
   // Unhides everything elseo covered by the "curtain"
   document.getElementById("curtain").style.display = `block`;
 
-  if (infoFetchError && guildFetchError) {
-    document.getElementById(
-      "error"
-    ).innerText = `There was an error while retrieving your info.\nPlease try again in a few minutes.`;
+  if (infoFetchError || guildFetchError) {
+    window.location.href = `https://${window.location.hostname}/error`
   }
 }
 
-run();
+run()
