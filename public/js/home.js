@@ -3,10 +3,10 @@ async function run() {
     /access_token=[+A-z0-9]{1,30}/
   );
   if (!rawToken) {
-    window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2Flighthouse.issai.club&response_type=token&scope=guilds%20identify`;
+    window.location.href = `https://discord.com/api/oauth2/authorize?client_id=796490540619137024&prompt=none&redirect_uri=https%3A%2F%2FLighthouse-Beta.thelimifiedlime.repl.co&response_type=token&scope=guilds%20identify`;
   }
   const token = await rawToken[0].replace("access_token=", "");
-  window.history.pushState({}, "", " ");
+  //window.history.pushState({}, "", " ");
 
   await axios
     .get("https://discord.com/api/users/@me", {
@@ -24,7 +24,9 @@ async function run() {
       ).innerText = `Hey, ${response.data.username}#${response.data.discriminator}`;
     })
     .catch(function (error) {
-      alert(`An error occured while fetching your user info`);
+      document.getElementById(
+        "welcome"
+      ).innerHTML = `An error occured while fetching your user info`;
     });
 
   await axios
@@ -41,7 +43,9 @@ async function run() {
       document.getElementById("curtain").style.display = `block`;
     })
     .catch(function (error) {
-      alert(`An error occured while fetching your server count`);
+      document.getElementById(
+        "counter"
+      ).innerHTML = `An error occured while fetching your server count`;
     });
   document.getElementById("spinner").style.display = `none`;
   document.getElementById("curtain").style.display = `block`;
