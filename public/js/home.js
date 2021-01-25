@@ -64,9 +64,10 @@ async function run() {
   document.getElementById("curtain").style.display = `block`;
 
   if (infoFetchError && guildFetchError) {
-    document.getElementById("error").innerText = `There was an error while retrieving your info.\nPlease try again in a few minutes.`
+    document.getElementById(
+      "error"
+    ).innerText = `There was an error while retrieving your info.\nPlease try again in a few minutes.`;
   }
-
 }
 
 run();
