@@ -6,6 +6,8 @@
       var lyticus = new Lyticus("_jeUOKwEyxMYhguXZFu24");
       lyticus.trackNavigator();
       lyticus.trackPage();
+
+      window.addEventListener("click", lyticus.clickTracker());
     </script>
     <script
       src="https://kit-pro.fontawesome.com/releases/v5.13.0/js/pro.min.js"
@@ -49,14 +51,6 @@
 
     <meta name="theme-color" content="#192434" />
     <link href="/css/tailwind.css" rel="stylesheet" />
-    <!--<script
-      src="https://kit.fontawesome.com/44df751230.js"
-      crossorigin="anonymous"
-    ></script>-->
-    <script
-      src="https://kit-pro.fontawesome.com/releases/v5.13.0/js/pro.min.js"
-      data-auto-fetch-svg
-    ></script>
   </head>
 
   <body class="bg-gray-800">
@@ -74,6 +68,16 @@
       ></h1>
       <br />
       <h1 id="counter" class="text-center text-white text-5xl font-mono"></h1>
+      <div class="text-center">
+        <a
+          data-track-click="github"
+          target="_blank"
+          href="https://github.com/TheLimifiedLime/Lighthouse"
+          rel="noreferrer noopener"
+          ><i style="color: white" class="fab fa-github fa-2x mt-32"></i>
+          <p class="text-white font-mono">GitHub</p></a
+        >
+      </div>
     </div>
     <div
       id="spinner"
