@@ -1,22 +1,18 @@
 async function run() {
   // Here we use regex to get the access token from the callback
-  const rawToken = await window.location.href.match(
-    /token=[A-z0-9]{30}/
-  );
+  const rawToken = await window.location.href.match(/token=[A-z0-9]{30}/);
 
   let token;
   // If there isn't a token in the url (like when opening the site for the first time) it redirects the user to the auth page
   if (!rawToken) {
     if (document.cookie) {
-      const rawCookieToken = await document.cookie.match(
-        /token=[A-z0-9]{30}/
-      );
+      const rawCookieToken = await document.cookie.match(/token=[A-z0-9]{30}/);
       if (!rawCookieToken) {
-        window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2FLighthouse-Beta.thelimifiedlime.repl.co&response_type=token&scope=identify%20guilds`
+        window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2FLighthouse-Beta.thelimifiedlime.repl.co&response_type=token&scope=identify%20guilds`;
       }
       token = await rawCookieToken[0].replace("token=", "");
     } else {
-      window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2FLighthouse-Beta.thelimifiedlime.repl.co&response_type=token&scope=identify%20guilds`
+      window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2FLighthouse-Beta.thelimifiedlime.repl.co&response_type=token&scope=identify%20guilds`;
     }
   } else {
     // If there is a token it removes the first part to leave the token by itself
@@ -79,7 +75,7 @@ async function run() {
     window.location.href = `https://${window.location.hostname}/error`;
   }
 
-  document.cookie = `token=${token}`
+  document.cookie = `token=${token}`;
 }
 
 run();
