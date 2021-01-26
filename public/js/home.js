@@ -22,7 +22,6 @@ async function run() {
     const rawTime = await window.location.href.match(/in=[0-9]{6}/);
     const time = parseInt(rawTime[0].replace(`in=`, ``), 10);
     date.setTime(date.getTime() + Math.floor(time / 60 / 60) * 60 * 60 * 1000);
-    alert(date);
     document.cookie = `token=${token};expires=${date}"`;
   }
 
