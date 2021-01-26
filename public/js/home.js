@@ -29,7 +29,7 @@ async function run() {
   let guildFetchError;
 
   // "Clears" the ur at the top of the users browser to prevent showing the token any longer than necessary
-  //window.history.pushState({}, "", " ");
+  window.history.pushState({}, "", " ");
 
   // Sends a request to Discord's API to fetch basic user info used for the picture and greeting
   await axios
