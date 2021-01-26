@@ -17,13 +17,13 @@ async function run() {
   } else {
     // If there is a token it removes the first part to leave the token by itself
     token = await rawToken[0].replace("token=", "");
-    const date = new Date()
+    const date = new Date();
     // https://stackoverflow.com/questions/1050720/adding-hours-to-javascript-date-object#1051641
     const rawTime = await window.location.href.match(/in=[0-9]{6}/);
-    const time = parseInt(rawTime[0].replace(`in=`, ``), 10)
-    alert(time)
-    date.setTime(date.getTime() + (Math.floor(time / 60 / 60)*60*60*1000));
-    alert(date)
+    const time = parseInt(rawTime[0].replace(`in=`, ``), 10);
+    alert(time);
+    date.setTime(date.getTime() + Math.floor(time / 60 / 60) * 60 * 60 * 1000);
+    alert(date);
     document.cookie = `token=${token} expires=Thu, 18 Dec 2013 12:00:00 UTC"`;
   }
 
