@@ -1,16 +1,23 @@
 async function run() {
   // Here we use regex to get the access token from the callback
   const rawToken = await window.location.href.match(
-    /access_token=[+A-z0-9]{1,30}/
+    /token=[A-z0-9]{30}/
   );
 
   // If there isn't a token in the url (like when opening the site for the first time) it redirects the user to the auth page
   if (!rawToken) {
+    if (document.cookie) {
+    alert(`${document.cookie}`)
+    const patt = new Regexp(`/token=[A-z0-9]{30}/`)
+    token = 
+    
+    } 
     window.location.href = `https://discord.com/api/oauth2/authorize?client_id=796490540619137024&prompt=none&redirect_uri=https%3A%2F%2FLighthouse-Beta.thelimifiedlime.repl.co&response_type=token&scope=guilds%20identify`;
+  } else {
+    // If there is a token it removes the first part to leave the token by itself
+    token = await rawToken[0].replace("token=", "");
   }
 
-  // If there is a token it removes the first part to leave the token by itself
-  const token = await rawToken[0].replace("access_token=", "");
   let infoFetchError;
   let guildFetchError;
 
@@ -66,6 +73,8 @@ async function run() {
   if (infoFetchError || guildFetchError) {
     window.location.href = `https://${window.location.hostname}/error`;
   }
+
+  document.cookie = `token=${token} `
 }
 
 run();
