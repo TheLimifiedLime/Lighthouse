@@ -79,8 +79,20 @@
           href="https://github.com/TheLimifiedLime/Lighthouse"
           rel="noreferrer noopener"
           ><i style="color: white" class="fab fa-github fa-2x mt-32"></i>
-          <p class="text-white font-mono">GitHub</p></a
+          <!-- <p class="text-white font-mono">GitHub</p> --></a
         >
+
+        <div id="tooltip" role="tooltip">GitHub</div>
+        <script>
+  const button = document.querySelector('#button');
+  const tooltip = document.querySelector('#tooltip');
+
+  // Pass the button, the tooltip, and some options, and Popper will do the
+  // magic positioning for you:
+  Popper.createPopper(button, tooltip, {
+    placement: 'right',
+  });
+</script>
       </div>
     </div>
     <div
