@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
     content: ["./public/*.html", "./public/*.js"],
     options: {
       safelist: ["border-8"],
