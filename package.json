@@ -4,7 +4,7 @@
   "description": "Lighthouse is a beautiful, yet simple to use tool to view how many Discord servers you are in",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
