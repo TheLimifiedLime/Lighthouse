@@ -1,0 +1,4 @@
+tasks:
+  - init: npm i
+  - command: pip3 install thefuck
+  - command: eval $(thefuck --alias --enable-experimental-instant-mode)
