@@ -18,13 +18,11 @@
     "url": "https://github.com/TheLimifiedLime/Lighthouse/issues"
   },
   "homepage": "https://github.com/TheLimifiedLime/Lighthouse#readme",
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^10.2.0",
     "postcss": "^8.2.2",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.0.2"
-  },
-  "devDependencies": {
+    "tailwindcss": "^2.0.2",
     "express": "^4.17.1"
   }
 }
