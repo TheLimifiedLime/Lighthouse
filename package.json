@@ -4,7 +4,7 @@
   "description": "Lighthouse is a beautiful, yet simple to use tool to view how many Discord servers you are in",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=development postcss public/css/index.css -o public/css/tailwind.css",
+    "dev": "NODE_ENV=development postcss ./public/css/index.css -o ./public/css/tailwind.css",
     "build": "NODE_ENV=production postcss public/css/index.css -o public/css/tailwind.css",
     "start": "node ."
   },
