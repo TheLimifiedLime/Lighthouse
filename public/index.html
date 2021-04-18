@@ -3,6 +3,9 @@
   <head>
     <script src="https://unpkg.com/lyticus" defer></script>
     <script>
+      if (navigator.doNotTrack) {
+        alert("We detected you have DNT")
+      }
 
       var lyticus = new Lyticus("_jeUOKwEyxMYhguXZFu24");
       lyticus.trackNavigator();
@@ -95,7 +98,7 @@
         class="fas fa-spinner-third animate-spin fa-3x"
       ></i>
       <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="/js/home.js"></script>
+      <script src="/js/index.js"></script>
     </div>
   </body>
 </html>
