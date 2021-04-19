@@ -8,11 +8,11 @@ async function run() {
     if (document.cookie) {
       const rawCookieToken = await document.cookie.match(/token=[A-z0-9]{30}/);
       if (!rawCookieToken) {
-        window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2F3000-blue-flamingo-eqtqvlkk.ws-us03.gitpod.io&response_type=token&scope=identify%20guilds`;
+        window.location.href = `https://discord.com/api/oauth2/authorize?client_id=796490540619137024&redirect_uri=https%3A%2F%2F3000-blue-flamingo-eqtqvlkk.ws-us03.gitpod.io%2F&response_type=token&scope=identify%20guilds&prompt=none`;
       }
       token = await rawCookieToken[0].replace("token=", "");
     } else {
-      window.location.href = `https://discord.com/api/oauth2/authorize?prompt=none&client_id=796490540619137024&redirect_uri=https%3A%2F%2F3000-blue-flamingo-eqtqvlkk.ws-us03.gitpod.io&response_type=token&scope=identify%20guilds`;
+      window.location.href = `https://discord.com/api/oauth2/authorize?client_id=796490540619137024&redirect_uri=https%3A%2F%2F3000-blue-flamingo-eqtqvlkk.ws-us03.gitpod.io%2F&response_type=token&scope=identify%20guilds&prompt=none`;
     }
   } else {
     // If there is a token it removes the first part to leave the token by itself
