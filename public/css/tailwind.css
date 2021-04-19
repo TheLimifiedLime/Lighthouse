@@ -643,6 +643,14 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
+.bg-accent {
+	--tw-bg-opacity: 1;
+	background-color: rgba(202, 255, 191, var(--tw-bg-opacity));
+}
+.bg-white {
+	--tw-bg-opacity: 1;
+	background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
 .text-center {
 	text-align: center;
 }
