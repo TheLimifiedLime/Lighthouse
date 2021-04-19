@@ -2,10 +2,10 @@
 <html>
   <head>
     <script src="https://unpkg.com/lyticus" defer></script>
-    <script>
+    <script defer>
       /* 
         Here we check if the user's browser has either DNT (do-not-track) or GCP (global-privacy-control).
-        If they do we don't enable the analyticsg
+        If they do we don't enable the analytics
        */
       if (navigator.doNotTrack || navigator.globalPrivacyControl) {
         return;
