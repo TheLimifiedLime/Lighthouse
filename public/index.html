@@ -3,15 +3,19 @@
   <head>
     <script src="https://unpkg.com/lyticus" defer></script>
     <script>
-      if (navigator.doNotTrack) {
-        alert("We detected you have DNT")
+      /* 
+        Here we check if the user's browser has either DNT (do-not-track) or GCP (global-privacy-control).
+        If they do we don't enable the analyticsg
+       */
+      if (navigator.doNotTrack || navigator.globalPrivacyControl) {
+        return;
+      } else {
+        const lyticus = new Lyticus("_jeUOKwEyxMYhguXZFu24");
+        lyticus.trackNavigator();
+        lyticus.trackPage();
+
+        window.addEventListener("click", lyticus.clickTracker());
       }
-
-      var lyticus = new Lyticus("_jeUOKwEyxMYhguXZFu24");
-      lyticus.trackNavigator();
-      lyticus.trackPage();
-
-      window.addEventListener("click", lyticus.clickTracker());
     </script>
     <script
       src="https://kit-pro.fontawesome.com/releases/v5.13.0/js/pro.min.js"
@@ -45,14 +49,12 @@
       content="https://lighthouse.issai.club/media/lighthouse.png"
     />
     <meta property="og:url" content="https://lighthouse.issai.club" />
-
     <meta name="twitter:creator" content="TheLimifiedLime" />
     <meta name="twitter:card" content="summary" />
     <meta
       name="twitter:image:alt"
       content="A white lighthouse on a dark gray background"
     />
-
     <meta name="theme-color" content="#192434" />
     <link href="/css/tailwind.css" rel="stylesheet" />
   </head>
