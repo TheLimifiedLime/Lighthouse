@@ -44,7 +44,7 @@ async function run() {
         "avatar"
       ).src = `https://cdn.discordapp.com/avatars/${response.data.id}/${response.data.avatar}?size=4096`;
       // Adds the border around the image
-      document.getElementById("avatar").classList.add("border-8");
+      document.getElementById("avatar").classList.add("border-accent");
       // Adds the greeting to the welcome element
       document.getElementById(
         "welcome"
@@ -66,7 +66,7 @@ async function run() {
       // Edits the counter to display the number of guilds
       document.getElementById(
         "counter"
-      ).innerHTML = `You are in <span id="counter" class="text-center text-green-500 text-5xl font-mono">${response.data.length}</span> servers!`;
+      ).innerHTML = `You are in <span id="counter" class="text-center text-accent text-5xl font-mono">${response.data.length}</span> servers!`;
     })
     .catch(function (error) {
       guildFetchError = true;

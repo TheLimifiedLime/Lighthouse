@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--Analytics-->
     <script src="https://unpkg.com/lyticus" defer></script>
     <script defer>
       /* 
@@ -17,6 +18,7 @@
         window.addEventListener("click", lyticus.clickTracker());
       }
     </script>
+    <!--Font Awesome-->
     <script
       src="https://kit-pro.fontawesome.com/releases/v5.13.0/js/pro.min.js"
       crossorigin="anonymous"
@@ -56,51 +58,15 @@
       content="A white lighthouse on a dark gray background"
     />
     <meta name="theme-color" content="#192434" />
+    <!--CSS and Fonts-->
     <link href="/css/tailwind.css" rel="stylesheet" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+      body {
+        font-family: "Nunito", sans-serif;
+      }
+    </style>
   </head>
 
-  <body class="bg-gray-800">
-    <div id="curtain" style="display: none">
-      <img
-        id="avatar"
-        src="https://dummyimage.com/1000x1000/1f2937/1f2937.png"
-        style="margin: auto; margin-top: 1rem"
-        class="rounded-full border-solid border-green-500 w-60 h-60"
-        ondragstart="return false;"
-      />
-      <h1
-        id="welcome"
-        class="mt-12 text-center text-white text-3xl font-mono"
-      ></h1>
-      <br />
-      <h1 id="counter" class="text-center text-white text-5xl font-mono"></h1>
-      <div class="text-center">
-        <a
-          data-track-click="github"
-          target="_blank"
-          href="https://github.com/TheLimifiedLime/Lighthouse"
-          rel="noreferrer noopener"
-          ><i style="color: white" class="fab fa-github fa-2x mt-32"></i>
-          <p class="text-white font-mono">GitHub</p></a
-        >
-      </div>
-    </div>
-    <div
-      id="spinner"
-      style="
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      "
-      class="text-center"
-    >
-      <i
-        style="color: white"
-        class="fas fa-spinner-third animate-spin fa-3x"
-      ></i>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="/js/index.js"></script>
-    </div>
-  </body>
+  <body class="bg-black"></body>
 </html>
