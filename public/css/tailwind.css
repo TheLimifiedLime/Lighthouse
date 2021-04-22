@@ -557,6 +557,14 @@ video {
 	--tw-ring-offset-shadow: 0 0 #0000;
 	--tw-ring-shadow: 0 0 #0000;
 }
+.mx-10 {
+	margin-left: 2.5rem;
+	margin-right: 2.5rem;
+}
+.my-5 {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
 .mt-8 {
 	margin-top: 2rem;
 }
@@ -588,10 +596,18 @@ video {
 .flex-col {
 	flex-direction: column;
 }
+.justify-items-center {
+	justify-items: center;
+}
 .space-y-12 > :not([hidden]) ~ :not([hidden]) {
 	--tw-space-y-reverse: 0;
 	margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
 	margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+}
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+	--tw-space-x-reverse: 0;
+	margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+	margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .border {
 	border-width: 1px;
