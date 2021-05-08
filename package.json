@@ -1,4 +1,5 @@
-{
+c
+git{
   "name": "lighthouse",
   "version": "1.0.0",
   "description": "Lighthouse is a beautiful, yet simple to use tool to view how many Discord servers you are in",
