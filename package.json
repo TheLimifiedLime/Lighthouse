@@ -1,5 +1,4 @@
-c
-git{
+{
   "name": "lighthouse",
   "version": "1.0.0",
   "description": "Lighthouse is a beautiful, yet simple to use tool to view how many Discord servers you are in",
@@ -11,14 +10,14 @@ git{
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheLimifiedLime/Lighthouse.git"
+    "url": "git+https://github.com/SeasideDevs/Lighthouse.git"
   },
   "author": "Issai H",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TheLimifiedLime/Lighthouse/issues"
+    "url": "https://github.com/SeasideDevs/Lighthouse/issues"
   },
-  "homepage": "https://github.com/TheLimifiedLime/Lighthouse#readme",
+  "homepage": "https://github.com/SeasideDevs/Lighthouse#readme",
   "devDependencies": {
     "autoprefixer": "^10.2.5",
     "express": "^4.17.1",
