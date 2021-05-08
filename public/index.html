@@ -67,7 +67,10 @@
       }
     </style>
   </head>
-  <body class="bg-white dark:bg-black text-black dark:text-white text-xl">
+  <body
+    id="test"
+    class="bg-white dark:bg-black text-black dark:text-white text-xl"
+  >
     <nav>
       <a href="/"><h1 class="ml-10 mt-5 text-3xl">Lighthouse</h1></a>
     </nav>
@@ -76,11 +79,17 @@
       <!--Text Part-->
       <div class="flex flex-col"></div>
     </div>
+    <!--This part is temporary to toggle the theme while in development-->
     <script>
       const toggleTheme = () => {
-        document.body.classList.add("dark")
-      }
+        document.documentElement.classList.toggle("dark")
+      };
     </script>
-
+    <button
+      class="border-2 border-black dark:border-white rounded-full"
+      onclick="toggleTheme()"
+    >
+      toggle theme
+    </button>
   </body>
 </html>
