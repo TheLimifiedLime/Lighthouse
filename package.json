@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "watch": "NODE_ENV=development postcss public/css/index.css -o ./public/css/tailwind.css -w",
+    "build:scripts": "npx tsc",
     "build:css": "NODE_ENV=production postcss public/css/index.css -o public/css/tailwind.css",
     "start": "node ."
   },
