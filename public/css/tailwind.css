@@ -579,8 +579,26 @@ video {
 .mt-5 {
 	margin-top: 1.25rem;
 }
+.block {
+	display: block;
+}
+.\!block {
+	display: block !important;
+}
+.inline-block {
+	display: inline-block;
+}
+.\!inline {
+	display: inline !important;
+}
+.inline {
+	display: inline;
+}
 .flex {
 	display: flex;
+}
+.hidden {
+	display: none;
 }
 @-webkit-keyframes spin {
 
@@ -664,6 +682,10 @@ video {
 .text-4xl {
 	font-size: 2.25rem;
 	line-height: 2.5rem;
+}
+.\!text-4xl {
+	font-size: 2.25rem !important;
+	line-height: 2.5rem !important;
 }
 .text-green-500 {
 	--tw-text-opacity: 1;
