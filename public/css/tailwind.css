@@ -714,6 +714,9 @@ video {
 	outline: 2px solid transparent;
 	outline-offset: 2px;
 }
+.duration-500 {
+	transition-duration: 500ms;
+}
 .dark .dark\:border-white {
 	--tw-border-opacity: 1;
 	border-color: rgba(255, 255, 255, var(--tw-border-opacity));
