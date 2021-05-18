@@ -13,3 +13,15 @@ if (theme === "dark" ||
 else {
     document.documentElement.classList.remove("dark");
 }
+var toggleTheme = function () {
+    // If the site doesn't have the dark mode class add it and save it to localstorage
+    if (document.documentElement.classList.contains("dark") === false) {
+        document.documentElement.classList.toggle("dark");
+        return localStorage.setItem("theme", "dark");
+    }
+    // If the site has the dark mode class remove it and save it to localstorage
+    if (document.documentElement.classList.contains("dark") === true) {
+        document.documentElement.classList.toggle("dark");
+        return localStorage.setItem("theme", "light");
+    }
+};
