@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--Analytics-->
-    <!--<script src="https://unpkg.com/lyticus" defer></script>-->
-    <script defer>
-      /* 
-        Here we check if the user's browser has either DNT (do-not-track) or GCP (global-privacy-control).
-        If they do we don't enable the analytics
-       */
-      if (navigator.doNotTrack || navigator.globalPrivacyControl) {
-        return;
-      } else {
-        const lyticus = new Lyticus("_jeUOKwEyxMYhguXZFu24");
-        lyticus.trackNavigator();
-        lyticus.trackPage();
-
-        window.addEventListener("click", lyticus.clickTracker());
-      }
-    </script>
     <!--CSS.GG-->
     <!--<link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />-->
     <title>Lighthouse</title>
